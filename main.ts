@@ -1,5 +1,5 @@
 import "dotenv/config";
-import express from "express";
+import  express  from "express";
 import morgan from "morgan";
 import { SignalConstants } from "node:os";
 import process from "node:process";
@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json())
 app.use(morgan("combined"));
 
-app.get("/", (req, res) => {
+app.get("/", (req : any, res: any ) => {
 	res.json({ msg: "Hello from express" })
 })
 
