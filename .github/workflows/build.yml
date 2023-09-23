@@ -43,5 +43,5 @@ jobs:
         DB_PASSWORD: ${{ secrets.BD_PASSWORD }}
         GIT_VERSION: ${{ steps.image_version.outputs.gitsha}}
     - name: print logs
-      if: always() # this step will be executed always even if previous stpes failed
+      if: always() # this step will be executed always even if previous stpes fails
       run: docker compose logs
